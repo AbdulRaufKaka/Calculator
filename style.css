@@ -1,54 +1,63 @@
 
 body{
-
-    padding-top: 40px;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 93vh;
+    height: 100vh;
+    background-color: hsl(0, 0%, 95%);
 }
 
 #display
 {
     width: 100%;
     padding: 20px;
-    font-size: 5rem;
+    font-size: 2.5rem;
     text-align: left;
     border: none;
     background-color: hsla(0, 5%, 57%, 0.772);
     color: white;   
     cursor:text;
+    border-radius: 50px;
+    box-sizing: border-box;
 }
 
 #Calculator
 {
     font-family: Arial,  sans-serif;
     background-color: hsl(0, 0%, 15%);
-    border-radius: 35px;
-    max-width: 500px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 490px;
     overflow: hidden;
-
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 #keys
 {
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    gap: 18px;
-    padding: 20px;
+    gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 
 button{
-    width: 100px;
+    width: 100%;
     height: 100px;
-    border-radius: 50px;
+    border-radius: 50%;
     border: none;
     background-color: hsl(0, 0%, 30%); /*Understand what is Hsl */
     color: white;
-    font-size: 3rem; /*What was rem unit in sizing */
+    font-size: 2rem; /*What was rem unit in sizing */
     font-weight: bold;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
 
     &:hover
 {
@@ -76,3 +85,33 @@ button{
     }
 
 }
+
+@media (max-width:768) {
+    #display{
+        font-size: 2rem;
+    }
+
+    button{
+        height: 80px;
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width:480px) {
+    #display{
+        font-size: 1.5rem;
+        padding: 15px;
+    }
+    button{
+        height: 70px;
+        font-size: 1.5rem;
+    }
+    #Calculator{
+        padding: 5px;
+    }
+    #keys{
+        gap: 5px;
+    }
+
+}
+
